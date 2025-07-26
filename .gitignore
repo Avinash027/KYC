@@ -1,0 +1,28 @@
+# Ignore virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore key/secret files
+keyfile.json
+generated-arena-465720-v0-05bbed35726a.json
+
+# Ignore logs and debug
+*.log
+
+# Ignore environment config
+.env
+*.env
