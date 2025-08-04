@@ -44,9 +44,6 @@ class IDDocumentProcessor:
             expiry_date = "N/A"
             document_type = "N/A"
             gender = "N/A"
-
-            # Simple regex patterns for common fields (these might need significant refinement for real-world use)
-            # Name: often found after labels like 'Name', 'Full Name', or as the most prominent text
             name_match = re.search(r'(?:Name|Full Name|Nom)\s*:\s*([A-Z\s]+)', full_text, re.IGNORECASE)
             if name_match: name = name_match.group(1).strip()
             else: # Try to find a prominent name if no label
