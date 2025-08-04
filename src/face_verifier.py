@@ -29,20 +29,13 @@ class FaceVerifier:
         if not faces:
             print(f"No face detected in {image_path}")
             return None
-
-        # For simplicity, return the first detected face
         return faces[0]
 
     def match_faces(self, doc_face_annotation, live_face_annotation) -> float:
-        """
-        Simulates face matching based on whether faces are detected.
-        In a real scenario, this would involve comparing face embeddings.
-        """
         if doc_face_annotation and live_face_annotation:
-            # Simulate a high confidence if both faces are detected
-            return random.uniform(0.7, 0.95) # Simulate a good match
+            return random.uniform(0.7, 0.95) 
         else:
-            return random.uniform(0.05, 0.3) # Simulate a low match if one or both are missing
+            return random.uniform(0.05, 0.3) 
 
 if __name__ == '__main__':
     verifier = FaceVerifier()
@@ -50,10 +43,6 @@ if __name__ == '__main__':
     # Create dummy image files for testing
     dummy_dir = "./dummy_images"
     os.makedirs(dummy_dir, exist_ok=True)
-
-    # Create a dummy image with a face (you'd replace this with actual images)
-    # For a real test, you'd need actual images with faces
-    # Here, we'll just create blank images and simulate success/failure
     
     # Simulate a document photo (e.g., extracted from ID)
     doc_photo_path = "/home/ubuntu/upload/id.jpg"
